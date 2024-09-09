@@ -37,6 +37,9 @@ function fleschKincaid(text){
     // Store vowels
     const vowels = ['a','e','i','o','u'];
 
+    // Replace all non-alphabetical characters with empty string
+    text = text.replaceAll(/[^a-zA-Z0-9]/g, ' ');
+
     // Create array of words
     let words = text.split(' ');
     // Store number of words
@@ -44,9 +47,6 @@ function fleschKincaid(text){
 
     // Store number of vowels
     let syllablesCount = 0;
-
-    // Replace all non-alphabetical characters with empty string
-    text = text.replaceAll(/[^a-zA-Z0-9]/g, ' ');
 
     // Check the characters in each word
     for(let word = 0; word < words.length; word++){
