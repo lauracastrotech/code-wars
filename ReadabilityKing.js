@@ -29,23 +29,29 @@ The average number of words per sentence is 4 and the average number of syllable
 // input : a string
 // output : round two decimal places (the grade level of the text)
 // get the average number of words per sentence
-
 // get the average number of syllables per word
+// calculate grade level
+// round to two decimals
 
 function fleschKincaid(text){
     // Store vowels
-    const vowels = 'aeiou';
+    const vowels = ['a','e','i','o','u'];
 
+    // Create array of words
+    let words = text.split(' ');
     // Store number of words
-    let words = text.split(' ').length; // ['The', 'turtle', 'is', 'leaving.'] 4 words
+    let wordsCount = text.split(' ').length; // ['The', 'turtle', 'is', 'leaving.'] 4 words
 
     // Store number of vowels
-    let syllables = 0;
+    let syllablesCount = 0;
 
     // Replace all non-alphabetical characters with empty string
-    text = text.replaceAll(/[^a-zA-Z0-9]/, '');
+    text = text.replaceAll(/[^a-zA-Z0-9]/g, ' ');
 
-    
+    // Check the characters in each word
+    for(let word = 0; word < words.length; word++){
+        console.log(words[word]);
+    }
 
   }
 
@@ -58,3 +64,7 @@ var txts = [
     "Oh no! The lemming is falling.", // 1.31
     "Do not cut your fingers as your katana is getting sharper! Be gentle." // 4.19
   ]
+
+  txts.forEach(element => {
+    fleschKincaid(element);
+  });
