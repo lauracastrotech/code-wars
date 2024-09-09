@@ -34,6 +34,9 @@ The average number of words per sentence is 4 and the average number of syllable
 // round to two decimals
 
 function fleschKincaid(text){
+
+  // need to fix because the text is an array of sentences and you are getting the average of words/syllables from the sentences 
+  
     // Store vowels
     const vowels = ['a','e','i','o','u'];
 
