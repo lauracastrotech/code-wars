@@ -1,2 +1,0 @@
-# code-wars
-Coding challenges
