@@ -9,6 +9,7 @@ We will use the Flesch–Kincaid Grade Level to evaluate the readability of a pi
 The way to calculate the grade level is as follows:
 
 (0.39 * average number of words per sentence) + (11.8 * average number of syllables per word) - 15.59
+
 Write a function that will calculate the Flesch–Kincaid grade level for any given string. Return the grade level rounded to two decimal points.
 
 Ignore hyphens, dashes, apostrophes, parentheses, ellipses and abbreviations.
@@ -19,6 +20,41 @@ HINT: Count the number of vowels as an approximation for the number of syllables
 
 Example
 "The turtle is leaving." ==> 3.67
+
 The average number of words per sentence is 4 and the average number of syllables per word is 1.5. The score is then (0.39 * 4) +  (11.8 * 1.5) - 15.59 = 3.67
 
 */
+
+// pseudo code
+// input : a string
+// output : round two decimal places (the grade level of the text)
+// get the average number of words per sentence
+
+// get the average number of syllables per word
+
+function fleschKincaid(text){
+    // Store vowels
+    const vowels = 'aeiou';
+
+    // Store number of words
+    let words = text.split(' ').length; // ['The', 'turtle', 'is', 'leaving.'] 4 words
+
+    // Store number of vowels
+    let syllables = 0;
+
+    // Replace all non-alphabetical characters with empty string
+    text = text.replaceAll(/[^a-zA-Z0-9]/, '');
+
+    
+
+  }
+
+
+// Tests
+var txts = [
+    "The turtle is leaving.", // 3.67
+    "A good book is hard to find.", // -1.06
+    "To be or not to be. That is the question.", // -0.66
+    "Oh no! The lemming is falling.", // 1.31
+    "Do not cut your fingers as your katana is getting sharper! Be gentle." // 4.19
+  ]
