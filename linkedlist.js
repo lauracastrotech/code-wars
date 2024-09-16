@@ -19,3 +19,19 @@ Inspired by Stanford Professor Nick Parlante's excellent Linked List teachings.
 
 I'm aware that there are better ways to create linked lists (class methods, reference pointers, etc.), but not all languages have the same features. I'd like to keep the basic API consistent between language translations for this kata.
 */
+
+function Node(data) {
+    this.data = data;
+    this.next = null;
+    
+  }
+  
+  function push(head, data) {
+    // Go.
+    this.data = data;
+    this.next = null;
+  }
+  
+  function buildOneTwoThree() {
+    // Go.
+  }
