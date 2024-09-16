@@ -28,8 +28,8 @@ function Node(data) {
   
   function push(head, data) {
     // Go.
-    this.data = data;
-    this.next = null;
+    this.next = data;
+    this.data = this.next;
   }
   
   function buildOneTwoThree() {
