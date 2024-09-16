@@ -1,4 +1,4 @@
-const LinkedList = require("../src/linked_list");
+const LinkedList = require("../src/linkedlist");
 
 let linkedList = null;
 

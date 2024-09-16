@@ -27,9 +27,10 @@ function Node(data) {
   }
   
   function push(head, data) {
-    // Go.
-    this.next = data;
-    this.data = this.next;
+    // Update next pointer to data
+    this.next = head;
+    // Set head of next node to data
+    head.data = data; 
   }
   
   function buildOneTwoThree() {
